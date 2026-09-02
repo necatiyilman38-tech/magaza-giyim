@@ -1,0 +1,206 @@
+
+    margin-bottom: 15px;
+}
+
+.product button {
+    width: 100%;
+    padding: 12px;
+    background: #111;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer p {
+    color: #aaa;
+    margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+    nav {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .categories,
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .categories,
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .product-img {
+        height: 350px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MODA</div>
+
+    <nav>
+        <a href="#">Ana Sayfa</a>
+        <a href="#urunler">Ürünler</a>
+        <a href="#kategoriler">Kategoriler</a>
+    </nav>
+
+    <button class="cart">
+        🛒 Sepet <span id="cartCount">0</span>
+    </button>
+</header>
+
+<div class="hero">
+    <div>
+        <small>YENİ SEZON 2026</small>
+
+        <h1>Tarzını<br>Keşfet.</h1>
+
+        <p>Modern, rahat ve şık giyim ürünleri.</p>
+
+        <a href="#urunler" class="btn">
+            Alışverişe Başla
+        </a>
+    </div>
+</div>
+
+<section id="kategoriler">
+
+    <h2>Kategoriler</h2>
+
+    <div class="categories">
+
+        <div class="category">
+            👗 Kadın
+        </div>
+
+        <div class="category">
+            👕 Erkek
+        </div>
+
+        <div class="category">
+            🔥 Yeni Sezon
+        </div>
+
+    </div>
+
+</section>
+
+<section id="urunler">
+
+    <h2>Çok Satanlar</h2>
+
+    <div class="products">
+
+        <div class="product">
+            <div class="product-img">
+                TİŞÖRT
+            </div>
+
+            <div class="product-info">
+                <h3>Oversize Basic Tişört</h3>
+                <div class="price">599,90 TL</div>
+
+                <button onclick="addCart()">
+                    Sepete Ekle
+                </button>
+            </div>
+        </div>
+
+
+        <div class="product">
+            <div class="product-img">
+                SWEATSHIRT
+            </div>
+
+            <div class="product-info">
+                <h3>Premium Sweatshirt</h3>
+                <div class="price">899,90 TL</div>
+
+                <button onclick="addCart()">
+                    Sepete Ekle
+                </button>
+            </div>
+        </div>
+
+
+        <div class="product">
+            <div class="product-img">
+                PANTOLON
+            </div>
+
+            <div class="product-info">
+                <h3>Relaxed Fit Pantolon</h3>
+                <div class="price">1.199,90 TL</div>
+
+                <button onclick="addCart()">
+                    Sepete Ekle
+                </button>
+            </div>
+        </div>
+
+
+        <div class="product">
+            <div class="product-img">
+                MONT
+            </div>
+
+            <div class="product-info">
+                <h3>Şişme Mont</h3>
+                <div class="price">1.999,90 TL</div>
+
+                <button onclick="addCart()">
+                    Sepete Ekle
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <h2>MODA</h2>
+
+    <p>Modern giyim, kolay alışveriş.</p>
+
+    <p>© 2026 MODA</p>
+
+</footer>
+
+<script>
+
+let cart = 0;
+
+function addCart() {
+
+    cart++;
+
+    document.getElementById("cartCount").innerText = cart;
+
+    alert("Ürün sepete eklendi 🛒");
+
+}
+
+</script>
+
+</body>
+</html>
